@@ -1,0 +1,67 @@
+/* global styles*/
+
+*{
+    box-sizing: border-box; /* browser settings */
+}
+
+.container {
+    max-width: 1024px;
+    margin: 40px auto 0 auto;
+}
+
+ing{  /* standard for responsive images*/
+    max-width: 100%; /* image scales */
+    height: auto; /* w/h ratio maintained */
+}
+
+/* gallery styles */
+
+.gallery {    /* class for ul */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gallery li {
+    float: left;
+    width: 48%;
+    margin: 1%;
+}
+
+.gallery li img {
+ transition: opacity .3s ease-in-out;
+}
+
+.gallery li img:hover {
+    opacity: .75;
+    transition: .5s ease-in-out;
+}
+
+#lightbox-overlay {
+    opacity: 0;
+    pointer-events: none; /*  property says that overlay is not the target of mouse events but descendants do have mouse events*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(29, 31, 33, 0.95);
+    transition: opacity .8s ease-in;
+}
+
+#lightbox-overlay.visible {
+    opacity: 1;
+    pointer-events: auto; /*  property says that pointer works when overlay is visible. */
+}
+
+#lightbox-image {
+    max-height: 90%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    background: transparent url("../pics/loading.gif") 50% 50% /no-repeat;
+    text-indent: -99999px;
+}
+

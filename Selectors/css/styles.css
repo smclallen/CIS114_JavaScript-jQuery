@@ -1,0 +1,19 @@
+body{
+    font-family: sans-serif, Arial;
+    }
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #9fa2fb;
+}
+
+button{
+    text-align: center;
+}
+button:hover{
+    background-color: chartreuse;
+    color: #fff;
+}
+
+
